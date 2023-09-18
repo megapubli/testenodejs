@@ -30,6 +30,6 @@ var server = http.createServer(function (req, res) {   //create web server
 
 });
 
-server.listen(80); //6 - listen for any incoming requests
+server.listen(process.env.PORT || 1000); //6 - listen for any incoming requests
 
-console.log('Node.js web server at port 80 is running..')
+console.log('Node.js web server at port ' + process.env.PORT + ' is running..')
